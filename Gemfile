@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -45,3 +45,29 @@ group :development do
   gem 'spring'
 end
 
+# learn-rails
+
+#front-end framework
+gem 'foundation-rails' 
+
+#access to the MailChimp API
+gem 'gibbon'
+
+#for static pages like “about”
+gem 'high_voltage'
+
+#forms made easy
+gem 'simple_form'
+
+
+group :development do
+
+	#helps when things go wrong
+	gem 'better_errors'
+
+	#suppresses distracting messages in the log
+	gem 'quiet_assets'
+
+	#generates files for an application layout
+	gem 'rails_layout'
+end
