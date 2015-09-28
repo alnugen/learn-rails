@@ -59,6 +59,8 @@ gem 'high_voltage'
 #forms made easy
 gem 'simple_form'
 
+gem 'figaro'
+
 
 group :development do
 
