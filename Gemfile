@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -62,7 +61,10 @@ gem 'simple_form'
 gem 'figaro'
 
 
-group :development do
+group :development, :test do
+
+	# Use sqlite3 as the database for Active Record
+	gem 'sqlite3'
 
 	#helps when things go wrong
 	gem 'better_errors'
@@ -72,4 +74,9 @@ group :development do
 
 	#generates files for an application layout
 	gem 'rails_layout'
+end
+
+group :production do
+   gem 'postgresql', '~> 1.0.0'
+   gem 'rails_12factor'
 end
